@@ -2,7 +2,7 @@ import { successMessage, errorMessage } from "./helper/toast";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 export const API_URL_ASSETS =
-  process.env.API_URL_ASSETS || "http://localhost:5000";
+  process.env.REACT_API_URL_ASSETS || "http://localhost:5000";
 
 export const getToken = () => localStorage.getItem("token");
 export const setToken = (t) => localStorage.setItem("token", t);
