@@ -4,11 +4,16 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 export const API_URL_ASSETS =
   process.env.REACT_API_URL_ASSETS || "http://localhost:5000";
 
+
+
 export const getToken = () => localStorage.getItem("token");
 export const setToken = (t) => localStorage.setItem("token", t);
 export const removeToken = () => localStorage.removeItem("token");
 
 export async function api(path, options = {}) {
+
+  console.log(process.env.REACT_API_URL_ASSETS,'REACT_API_URL_ASSETS');
+  
   const headers = options.headers || {};
   const token = getToken();
   if (token) headers["authorization"] = `Bearer ${token}`;
