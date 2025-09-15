@@ -13,6 +13,7 @@ export const removeToken = () => localStorage.removeItem("token");
 export async function api(path, options = {}) {
 
   console.log(process.env.REACT_API_URL_ASSETS,'REACT_API_URL_ASSETS');
+  console.log(process.env.REACT_API_URL_ASSETS,'REACT_API_URL_ASSETS');
   
   const headers = options.headers || {};
   const token = getToken();
